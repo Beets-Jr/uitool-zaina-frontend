@@ -1,0 +1,42 @@
+.container {
+  .avatarButton {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+
+    border: none;
+    
+    cursor: pointer;
+  }
+
+  &:hover .content {
+    display: block;
+  }
+}
+
+.content{
+  display: none;
+
+  button {
+    background: #A66226;
+    height: 3rem;
+    width: 14rem;
+    border-radius: 0.8rem;
+    border: 0;
+    padding: 0 1.5rem;
+
+    color: white;
+    font-weight: bold;
+    text-align: left;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  button:first-child {
+    margin-bottom: 1rem;
+  }
+
+}

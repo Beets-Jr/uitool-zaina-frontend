@@ -15,7 +15,7 @@
   margin-bottom: 2.5rem;
 }
 .container{
-  @include define_size(67.5rem, 32.25rem);
+  @include define_size(40.5rem, 32.25rem);
   margin: 0 auto;
   border-radius: 0.5rem;
   border: solid 0.0625rem black;
@@ -23,39 +23,21 @@
   display: flex;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 3.125rem;
-  margin-top: 10.6875rem;
-  margin-left: 5.625rem;
-
-  a {
-    transition: filter 0.2s;
-
-    &:hover{
-      filter: brightness(0.9);
-    }
-  } 
-}
-
-.separation{
-  margin-left: auto;
-  width: 1.3125rem;
-  .bar{
-    @include define_size(0.0625rem, 10.125rem);
-    margin: 2.5rem 0 2.5rem 0.4375rem;
-    background-color: black;
-  }
-}
 
 .sign_in{
   @include define_size(20.625rem, 20.875rem);
-  margin: 0 auto 0;
+  margin: 5.9375rem auto 0;
   .subtitle{
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 0.625rem;
+  }
+  .paw_data{
+    @include define_size(20.625rem, 3.75rem);
+    margin-top: 1.25rem;
+    padding-left: 1.875rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem SOLID BLACK;
   }
   .login_data{
     @include define_size(20.625rem, 3rem);
@@ -74,8 +56,8 @@
     border: none;
     cursor: pointer;
     transition: filter 0.2s;
-    
-    &:hover {
+
+    &:hover{
       filter: brightness(0.9);
     }
   }
@@ -84,10 +66,14 @@
   }
 }
 .pass_alternate{
+  color: #898989;
   display: flex;
   margin-top: 1.875rem;
   justify-content: space-around;
   .register{
     color: #a66226;
-  }
+    padding-right: 2.5rem;
+    border-right: 0.0625rem solid #898989;
 }
+}
+

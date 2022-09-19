@@ -83,8 +83,9 @@
 }
 
 .menu_container{
-  width: 40vmax;
+  width: 35vmax;
   aspect-ratio: 1;
+  margin-top: 4rem;
   background-color: transparent;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
@@ -199,4 +200,16 @@
       visibility: visible;
     }
   }
+}
+
+.barLateral {
+  background: #8FAD88;
+  width: 2rem;
+  height: 100vh;
+  max-height: 100%;
+
+}
+
+.main {
+  display: flex;
 }

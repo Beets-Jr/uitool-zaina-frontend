@@ -1,9 +1,7 @@
-import Image from 'next/image'
 import type { NextPage } from 'next'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
-import dashboard_button from '../public/dashboard_button.svg'
-import logout_button from '../public/logout_button.svg'
+
 
 import styles from '../styles/Home.module.scss'
 
@@ -12,10 +10,10 @@ const Home: NextPage = () => {
     <>
       <Header />
       <div className={styles.outerContainer}>
-        <div className={styles.buttons}>
+        {/* <div className={styles.buttons}>
           <Image src={dashboard_button} alt="Logo UI Tools" />
           <Image src={logout_button} alt="Login" />
-        </div>
+        </div> */}
         <div className={styles.videoBox}>
           <span>VÍDEO</span>
         </div>

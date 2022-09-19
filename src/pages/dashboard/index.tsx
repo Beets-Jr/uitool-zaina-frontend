@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { Header } from '../../components/header';
 import { useState } from 'react';
 
 import styles from '../../styles/Dashboard.module.scss'
@@ -14,7 +15,7 @@ const Modal: React.FC<ModalProps> = ({isOpen, onClose}) => {
       <p className={styles.modal_btnClose} onClick={() => onClose()}>Fechar</p>
       <div>
         <h1>Title</h1>
-        <img src='https://media.istockphoto.com/vectors/background-minimal-waves-design-vector-id1298530515' />
+        <img src='https://media.istockphoto.com/vectors/background-minimal-waves-design-vector-id1298530515' alt='tools'/>
       </div>
 
       <h3>Description</h3>
@@ -42,31 +43,38 @@ const MOCKUP_CARD = {
   title: 'exemplo',
   imgSrc: 'https://media.istockphoto.com/vectors/background-minimal-waves-design-vector-id1298530515'
 }
+
 const Dashboard: NextPage = () => {
   const [modalOpen, setModalOpen] = useState(false)
   return (
     <>
-      <Menu />
-      <section
-        className={styles.container}
-      // onClick={(e) => {
-      //   // setModalOpen(false);
-      // }}
-      >
-        {
-          [1, 2, 3, 4].map((v, index) => (
-            <Card
-              key={index}
-              title={MOCKUP_CARD.title}
-              imgSrc={MOCKUP_CARD.imgSrc}
-              onClick={() => {
-                setModalOpen(true);
-              }}
-            />
-          ))
-        }
-        <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
-      </section>
+      <Header />
+      <main className={styles.main}>
+        <div>
+          <div className={styles.barLateral}></div>
+          <Menu />
+        </div>
+        <section
+          className={styles.container}
+        // onClick={(e) => {
+        //   // setModalOpen(false);
+        // }}
+        >
+          {
+            [1, 2, 3, 4].map((v, index) => (
+              <Card
+                key={index}
+                title={MOCKUP_CARD.title}
+                imgSrc={MOCKUP_CARD.imgSrc}
+                onClick={() => {
+                  setModalOpen(true);
+                }}
+              />
+            ))
+          }
+          <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+        </section>
+      </main>
     </>
   )
 }

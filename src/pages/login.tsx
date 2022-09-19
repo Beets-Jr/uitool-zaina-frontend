@@ -4,6 +4,7 @@ import { Header } from '../components/header'
 import styles from '../styles/Login.module.scss'
 import google_button from '../public/google_button.svg'
 import face_button from '../public/face_button.svg'
+import Link from 'next/link'
 
 const Login: NextPage = () => {
   return (
@@ -38,8 +39,8 @@ const Login: NextPage = () => {
             </div>
           </form>
           <div className={styles.pass_alternate}>
-            <div className={styles.register}>Register now</div>
-            <div className={styles.forgot}>Forgot Password?</div>
+            <div className={styles.register}><Link href='/signup'>Register now</Link></div>
+            <div className={styles.forgot}><Link href='/forgot'>Forgot Password?</Link></div>
           </div>
         </div>
 
